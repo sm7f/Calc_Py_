@@ -1,17 +1,17 @@
-from tkinter import *  # importando a biblioteca TKinter
+from tkinter import *  
 
-# -------------------------------Layout---------------------------------------------------------------------------------
-janela = Tk()  # Atribuindo Janela
-janela.resizable(width=False, height=False)  # Fixador da janela
-janela.geometry('400x200')  # Dimensões da janela
-janela.title('Calculadora')  # titulo
+# ----------------------------------------------------------------------------------------------------------------------
+janela = Tk()  
+janela.resizable(width=False, height=False)  
+janela.geometry('400x200')  
+janela.title('Calculadora')  
 
 # ------------------------------- Display ------------------------------------------------------------------------------
 
-texto = Label(janela, text='Resultado')  # Mostra Resultado
+texto = Label(janela, text='Resultado')  
 texto.place(x=100, y=102)  # Posição
 
-texto2 = Label(janela, text='= ', font='bold')  # formatação da fonte e layout
+texto2 = Label(janela, text='= ', font='bold')  
 texto2.place(x=80, y=100)  # Posição
 
 caixa1 = Entry(janela)  # Display 1
@@ -21,23 +21,23 @@ caixa2 = Entry(janela)  # Display 2
 caixa2.place(x=200, y=70)  # Posição
 
 
-# ----------------------------- Adição ---------------------------------------------------------------------------------
+# ------------------------------ Adição ---------------------------------------------------------------------------------
 
 def bt_Ad():  # Função para fazer a operação
     try:
 
-        n1 = float(caixa1.get())  # get pega o valor que é escrito na variavel caixa1
+        n1 = float(caixa1.get())  # get valor caixa1
 
-        n2 = float(caixa2.get())  # get pega o valor que é escrito na variavel caixa2
+        n2 = float(caixa2.get())  # get valor caixa2
 
-        texto['text'] = n1 + n2  # executa a operação com os dois valores pegos
+        texto['text'] = n1 + n2  
 
-    except ValueError:  # excessão criada para impedir letras e simbolos
+    except ValueError:  # valor diferente
 
         texto['text'] = 'Valor invalido'
 
 
-# ------------------------------- Subtração ----------------------------------------------------------------------------
+# ------------------------------- Subtração -----------------------------------------------------------------------------
 def bt_Sb():
     try:
 
